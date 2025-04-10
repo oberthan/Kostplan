@@ -80,7 +80,7 @@ function pieChartEnergy(chartcontainer, summary){
 
     chartSvg
         .append("text")
-        .attr("transform", `translate(${width/2}, ${height/2 + radius}`)
+        .attr("transform", `translate(${width/2}, ${height/2 + radius})`)
         .text(`I alt: ${Object.values(data).reduce((a, b) => a.foodEnergy + b.foodEnergy, 0)}`)
 
     const pie = d3.pie().value(d => d.amount*d.foodEnergy/100)(data);
